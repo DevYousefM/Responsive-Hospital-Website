@@ -17,6 +17,12 @@ navBtn.addEventListener("click", () => {
     span.className = "navbar-toggler-icon";
   }
 });
+menu.addEventListener("click", (e) => {
+  if (e.target.dataset.link) {
+    console.log("done");
+    menu.classList.toggle("show");
+  }
+});
 document.addEventListener("click", (e) => {
   if (e.target === div) {
     div.classList.toggle("active");
