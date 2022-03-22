@@ -292,6 +292,11 @@ footer .text-muted {
     display: none;
   }
   /* About End */
+  #showFullScreen #LargeImg {
+   width: 80%;
+   height: 400px;
+  }
+  /* Facilities End */
   .review .container {
     flex-direction: column;
   }
