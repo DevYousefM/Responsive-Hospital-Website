@@ -21,6 +21,7 @@ menu.addEventListener("click", (e) => {
   if (e.target.dataset.link) {
     console.log("done");
     menu.classList.toggle("show");
+span.className = "fa-solid fa-xmark";
   }
 });
 document.addEventListener("click", (e) => {
