@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital Website</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white fixed-top"
+      id="navBar"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#"
+          ><span class="mainColor">H</span>ealth<span class="mainColor">C</span
+          >are</a
+        >
+        <button class="navbar-toggler" id="navBtn">
+          <span class="navbar-toggler-icon" id="togglerIcon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                id="homeSec"
+                data-link="home"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="aboutSec" data-link="about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="facilitiesSec" data-link="facilities"
+                >Facility</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="reviewSec" data-link="review">Review</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="contactSec" data-link="contact"
+                >Contact</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="postSec" data-link="post">Post</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Section Home Start -->
+    <section
+      class="home d-flex align-items-center justify-content-center py-5"
+      id="home"
+    >
+      <div class="container d-flex align-items-center justify-content-center">
+        <div class="col-5 imgDiv">
+          <img
+            src="media/home-img.svg"
+            alt="Doctors"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          />
+        </div>
+        <div
+          class="info col-6 ps-4 d-flex flex-column align-items-start justify-content-center"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
+          <p class="fw-normal fs-1">
+            <span class="mainColor">Stay</span> Safe,
+            <span class="mainColor">Stay</span> Healthy <br />
+            Caring For Your Life
+          </p>
+          <div class="btn btn-dark fw-bold px-4">Learn More</div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Home End -->
+    <!-- Section About Start -->
+    <section class="about w-100" id="about">
+      <div
+        class="container py-4 d-flex align-items-center justify-content-around"
+      >
+        <div
+          class="col-6 services"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
+          <div class="d-flex align-items-start">
+            <i class="fa-solid fa-truck-medical mainColor fa-xl lh-1 me-3"></i>
+            <div class="info d-flex flex-column">
+              <h4>Ambulance Services</h4>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. A
+                minima et reiciendis temporibus itaque maxime iure at.
+              </p>
+            </div>
+          </div>
+          <div class="d-flex align-items-start">
+            <i class="fa-solid fa-procedures mainColor fa-xl lh-1 me-3"></i>
+            <div class="info">
+              <h4>Emergency Rooms</h4>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. A
+                minima et reiciendis temporibus itaque maxime iure at.
+              </p>
+            </div>
+          </div>
+          <div class="d-flex align-items-start">
+            <i class="fa-solid fa-stethoscope mainColor fa-xl lh-1 me-3"></i>
+            <div class="info">
+              <h4>Free Check-ups</h4>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. A
+                minima et reiciendis temporibus itaque maxime iure at.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-5">
+          <img
+            src="https://webstockreview.net/images/clipart-doctor-lady-doctor-11.png"
+            alt="Doctor"
+            class="img-fluid"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- Section About End -->
+    <!-- Section Facilities Start -->
+    <section
+      class="facilities py-5 d-flex align-items-center justify-content-center flex-column"
+      id="facilities"
+    >
+      <h1>
+        <span class="mainColor">'</span>Our Facilities<span class="mainColor"
+          >'</span
+        >
+      </h1>
+      <div class="container py-2">
+        <div class="row justify-content-center" id="gallary"></div>
+      </div>
+      <div id="showFullScreen">
+        <i class="fa-solid fa-arrow-left" id="prev"></i>
+        <img src="media/img (4).jpg" id="LargeImg" />
+        <i class="fa-solid fa-arrow-right" id="next"></i>
+        <i class="fa fa-xmark" id="xmark"></i>
+      </div>
+    </section>
+    <!-- Section Facilities End -->
+    <!-- Section Review Start -->
+    <section
+      class="review py-4 d-flex flex-column justify-content-start align-items-center"
+      id="review"
+    >
+      <h1>
+        <span class="mainColor">'</span>People's Review<span class="mainColor"
+          >'</span
+        >
+      </h1>
+      <div
+        class="container col-10 mt-4 d-flex justify-content-center align-items-center"
+      >
+        <div
+          class="info col-4 mx-2 py-2 px-3"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
+          <p class="m-1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+            minima natus distinctio quaerat ipsam accusantium iste in provident.
+          </p>
+          <label class="h5 mt-3 mb-0 col-12 text-end mainColor">
+            Someone's Name
+          </label>
+          <p class="col-12 text-end m-0">Jan 4,2022</p>
+          <img src="media/Merlin Nguyen.jpg" alt="" />
+        </div>
+        <div
+          class="info col-4 mx-2 py-2 px-3"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <p class="m-1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+            minima natus distinctio quaerat ipsam accusantium iste in provident.
+          </p>
+          <label class="h5 mt-3 mb-0 col-12 text-end mainColor">
+            Someone's Name
+          </label>
+          <p class="col-12 text-end m-0">Jan 4,2022</p>
+          <img src="media/Riley Olie.jpg" alt="" />
+        </div>
+        <div
+          class="info col-4 mx-2 py-2 px-3"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
+          <p class="m-1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+            minima natus distinctio quaerat ipsam accusantium iste in provident.
+          </p>
+          <label class="h5 mt-3 mb-0 col-12 text-end mainColor">
+            Someone's Name
+          </label>
+          <p class="col-12 text-end m-0">Jan 4,2022</p>
+          <img src="media/Steve McCurry.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- Section Stats Start -->
+    <div class="stats">
+      <div class="container col-6 d-flex justify-content-center">
+        <div
+          class="col-4 d-flex justify-content-center align-items-center flex-column m-3"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <i class="fa-solid fa-hospital mainColor"></i>
+          <span>120+</span>
+          <label>Hospitals</label>
+        </div>
+        <div
+          class="col-4 d-flex justify-content-center align-items-center flex-column m-3"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <i class="fa-solid fa-users mainColor"></i>
+          <span>100+</span>
+          <label>Staff</label>
+        </div>
+        <div
+          class="col-4 d-flex justify-content-center align-items-center flex-column m-3"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <i class="fa-solid fa-face-smile mainColor"></i>
+          <span>1400+</span>
+          <label>Happy Patient</label>
+        </div>
+        <div
+          class="col-4 d-flex justify-content-center align-items-center flex-column m-3"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <i class="fa-solid fa-bed-pulse mainColor"></i>
+          <span>140+</span>
+          <label>Bed Facility</label>
+        </div>
+      </div>
+    </div>
+    <!-- Section Stats End -->
+    <!-- Section Contact Start -->
+    <section
+      class="contact d-flex justify-content-center align-items-center flex-column py-3"
+      id="contact"
+    >
+      <h1 class="mb-4 mt-2">
+        <span class="mainColor">'</span>Make An Appointment<span
+          class="mainColor"
+          >'</span
+        >
+      </h1>
+      <div
+        class="container d-flex col-10 justify-content-center align-items-center flex-wrap"
+        data-aos="flip-down"
+        data-aos-duration="1000"
+      >
+        <div class="mb-3 col-5 me-2">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Full Name"
+            aria-label="Username"
+            aria-describedby="basic-addon1"
+          />
+        </div>
+
+        <div class="col-5 mb-3">
+          <input type="tel" class="form-control" placeholder="Phone" />
+        </div>
+
+        <div class="mb-3 col-5 me-2">
+          <input type="email" class="form-control" placeholder="Email" />
+        </div>
+        <select class="form-select mb-3" aria-label="Default select example">
+          <option selected>Make An Appointment</option>
+          <option value="1">09-11 Am</option>
+          <option value="2">12-03 Pm</option>
+          <option value="3">03-06 Pm</option>
+          <option value="4">09-11 Pm</option>
+        </select>
+        <div class="input-group mb-3">
+          <textarea
+            class="form-control"
+            placeholder="Message (Optional)"
+            aria-label="With textarea"
+          ></textarea>
+        </div>
+        <button class="btn bg-dark btn-primary">Make Appointment</button>
+      </div>
+    </section>
+    <!-- Section Contact End -->
+    <!-- Section Posts Start -->
+    <section
+      class="posts py-4 d-flex flex-column justify-content-center align-items-center"
+      id="post"
+    >
+      <h1 class="mb-4 mt-2">
+        <span class="mainColor">'</span>Our Posts<span class="mainColor"
+          >'</span
+        >
+      </h1>
+      <div class="container col-10 d-flex flex-row">
+        <div
+          class="card col-4 shadow"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
+          <img src="media/img (1).jpg" class="card-img-top" />
+          <div class="card-body pt-2">
+            <label>Jan 5,2022</label>
+            <h5 class="card-title">Post Title Goes Here</h5>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero
+              voluptates dolor rerum earum doloribus, numquam ad aspernatur!
+            </p>
+            <a href="#" class="btn bg-dark btn-primary px-4">Read More</a>
+          </div>
+        </div>
+        <div
+          class="card col-4 mx-3 shadow"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <img src="media/img (4).jpg" class="card-img-top" />
+          <div class="card-body pt-2">
+            <label>Jan 5,2022</label>
+            <h5 class="card-title">Post Title Goes Here</h5>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero
+              voluptates dolor rerum earum doloribus, numquam ad aspernatur!
+            </p>
+            <a href="#" class="btn bg-dark btn-primary px-4">Read More</a>
+          </div>
+        </div>
+        <div
+          class="card col-4 shadow"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
+          <img src="media/img (9).jpg" class="card-img-top" />
+          <div class="card-body pt-2">
+            <label>Jan 5,2022</label>
+            <h5 class="card-title">Post Title Goes Here</h5>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero
+              voluptates dolor rerum earum doloribus, numquam ad aspernatur!
+            </p>
+            <a href="#" class="btn bg-dark btn-primary px-4">Read More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Posts End -->
+    <!-- Section Footer Start -->
+    <footer class="py-3 mt-4 bg-dark">
+      <div class="container">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item">
+            <a class="nav-link px-2 text-muted" data-link="home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-2 text-muted" data-link="about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-2 text-muted" data-link="facilities"
+              >Facility</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-2 text-muted" data-link="review">Review</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-2 text-muted" data-link="contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-2 text-muted" data-link="post">Post</a>
+          </li>
+        </ul>
+        <p class="text-center text-muted">
+          © 2021 <span class="mainColor">EG Dev</span>, Inc
+        </p>
+      </div>
+    </footer>
+    <!-- Section Footer End -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jQuery.js"></script>
+    <script src="js/plugins.js"></script>
+  </body>
+</html>

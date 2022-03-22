@@ -1,0 +1,363 @@
+:root {
+  --blue: #0188df;
+  --black: #354046;
+}
+section {
+  overflow: hidden;
+}
+*::selection {
+  background: var(--blue);
+  color: #fff;
+}
+li {
+  cursor: pointer;
+}
+body {
+  padding-top: 64px;
+}
+.mainColor {
+  color: var(--blue) !important;
+}
+nav {
+  transition: 0.3s all ease;
+}
+nav .navbar-collapse {
+  max-width: max-content;
+}
+nav .navbar-collapse.show {
+  position: fixed;
+}
+div.active {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+nav .navbar-collapse.show > ul {
+  position: fixed;
+  border: #0188df 2px solid;
+  width: 60%;
+  height: 40vh;
+  z-index: 1;
+  top: 80px;
+  left: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.navbar .fa-xmark {
+  font-size: 33px;
+}
+.navbar > .container {
+  justify-content: space-between;
+}
+.navbar-light .navbar-nav .nav-item .nav-link {
+  color: var(--black);
+  font-weight: 500;
+}
+
+.navbar-light .navbar-nav .nav-item .nav-link:hover,
+.navbar .navbar-brand:hover {
+  color: var(--blue);
+}
+.navbar .navbar-brand {
+  font-weight: 600;
+  font-size: 25px;
+}
+/* Navbar End */
+.home div.btn {
+  position: relative;
+  z-index: 0;
+  border: none;
+  overflow: hidden;
+}
+.home div.btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  background-color: var(--blue);
+  transition: 0.3s all ease;
+}
+.home div.btn:hover::after {
+  height: 6%;
+}
+
+/* Home End */
+.about {
+  background-color: #eee;
+}
+.about .info p {
+  font-size: 15px;
+}
+/* About End */
+.facilities .imgBox {
+  margin: 3px;
+  padding: 0 0;
+  overflow: hidden;
+}
+.facilities img,
+.facilities .imgBox {
+  height: 185px;
+  width: 300px;
+  cursor: zoom-in;
+}
+.facilities #gallary img:hover {
+  transition: 0.4s all ease-in-out;
+  transform: scale(1.2);
+}
+#showFullScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 25px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+}
+#showFullScreen i {
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+#showFullScreen #LargeImg {
+  width: 70%;
+  height: 60%;
+  cursor: default;
+}
+#showFullScreen #xmark {
+  position: fixed;
+  top: 15%;
+  right: 20%;
+}
+/* Facilities End  */
+.review {
+  background: fixed url(../media/rev-bg.jpg),
+    linear-gradient(var(--black), var(--black));
+  background-size: cover;
+  background-blend-mode: multiply;
+  color: white;
+}
+.review .info {
+  position: relative;
+  background-color: white;
+  color: var(--black);
+}
+.review .info::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  border-top: 20px solid #fff;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+}
+.review .info img {
+  position: absolute;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  left: -5px;
+  bottom: -70px;
+}
+.review > .container {
+  margin-bottom: 65px;
+}
+/* Review End */
+.stats i {
+  font-size: 35px;
+  margin-bottom: 5px;
+}
+.stats span {
+  color: var(--black);
+  font-size: 22px;
+}
+.stats label {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.7);
+}
+/* Stats End */
+.contact {
+  background-color: var(--black);
+  color: white;
+}
+.contact .form-select {
+  width: 41.66666667%;
+  cursor: pointer;
+}
+.contact .input-group {
+  width: 84.33333333%;
+}
+.contact button,
+.posts a.btn-primary {
+  position: relative;
+  z-index: 0;
+  border: none;
+  overflow: hidden;
+}
+.contact button::after,
+.posts a.btn-primary::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  background-color: var(--blue);
+  transition: 0.3s all ease;
+}
+.contact button:hover::after,
+.posts a.btn-primary:hover::after {
+  height: 6%;
+}
+/* Contact End */
+.posts .card:hover h5,
+footer a:hover {
+  color: var(--blue);
+}
+.posts .card-body p {
+  font-size: 13px;
+}
+/* Posts End */
+footer .text-muted {
+  color: white !important;
+}
+/* Footer End */
+/* Media Query */
+@media (max-width: 767.98px) {
+  .home {
+    padding: 15px 10px !important;
+  }
+  .home .container {
+    flex-direction: column;
+    margin: 0 0 !important;
+    padding: 0 0 !important;
+  }
+  .home .imgDiv,
+  .home .info {
+    width: 80%;
+  }
+  .home .info {
+    margin: 0 0 !important;
+    padding: 0 0 !important;
+    align-items: center !important;
+  }
+  .home p {
+    font-size: 18px !important;
+    text-align: center;
+  }
+  .home div.btn {
+    width: 15vh;
+    font-size: 12px;
+    height: 30px;
+    padding: 0 0;
+    line-height: 30px;
+  }
+  /* Home End */
+  .about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+  }
+  .about .container {
+    display: block !important;
+  }
+  .about .services {
+    width: 100% !important;
+    flex: 0 0;
+  }
+  .about .info {
+    width: 100%;
+  }
+  .about .info i,
+  .about .info p {
+    font-size: 12px;
+  }
+  .about .info h4 {
+    font-size: 18px;
+  }
+  .about img {
+    display: none;
+  }
+  /* About End */
+  .review .container {
+    flex-direction: column;
+  }
+  .review .info {
+    width: 80%;
+    margin-top: 70px;
+  }
+  .review .info img {
+    width: 40px;
+    height: 40px;
+    left: 0px;
+    bottom: -60px;
+  }
+  /* Review End */
+  .stats .container {
+    width: 90%;
+    flex-wrap: wrap;
+  }
+  /* Stats End */
+  .contact .container {
+    align-items: stretch !important;
+    flex-direction: column;
+  }
+  .contact .container div,
+  .contact .container select {
+    width: 100%;
+  }
+  /* Contact End */
+  .posts .container {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .posts .card {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 424.98px) {
+  /* NavBar */
+  nav .navbar-toggler {
+    padding: 1px 10px;
+  }
+  nav .navbar-toggler-icon {
+    width: 20px;
+  }
+  .navbar .fa-xmark {
+    font-size: 20px;
+    margin: 5px 0;
+  }
+  /* Review */
+  .review h1 {
+    margin-bottom: -45px;
+  }
+  .review .info {
+    margin-top: 60px;
+  }
+  /* Stats */
+  .stats .container {
+    width: 100%;
+  }
+}
+@media (min-width: 1400px) {
+  .contact .input-group {
+    width: 84.333333%;
+  }
+  .contact button {
+    width: 30%;
+  }
+}
