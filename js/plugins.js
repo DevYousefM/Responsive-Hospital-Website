@@ -21,7 +21,7 @@ menu.addEventListener("click", (e) => {
   if (e.target.dataset.link) {
     console.log("done");
     menu.classList.toggle("show");
-span.className = "fa-solid fa-xmark";
+span.className = "navbar-toggler-icon";
   }
 });
 document.addEventListener("click", (e) => {
