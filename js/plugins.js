@@ -8,7 +8,11 @@ let navBtn = document.getElementById("navBtn"),
 
 navBtn.addEventListener("click", () => {
   menu.classList.toggle("show");
-  div.classList.toggle("active");
+  if ((div.classList = "active")) {
+    div.classList.add("active");
+  } else {
+    div.classList.remove("active");
+  }
   document.body.appendChild(div);
   console.log(span);
   if (span.className === "navbar-toggler-icon") {
@@ -20,8 +24,9 @@ navBtn.addEventListener("click", () => {
 menu.addEventListener("click", (e) => {
   if (e.target.dataset.link) {
     console.log("done");
-    menu.classList.toggle("show");
-span.className = "navbar-toggler-icon";
+    menu.classList.remove("show");
+    div.classList.remove("active");
+    span.classList = "navbar-toggler-icon";
   }
 });
 document.addEventListener("click", (e) => {
@@ -79,8 +84,6 @@ window.onscroll = (e) => {
   // Highlight Section Link
   let sections = document.querySelectorAll("section");
   sections.forEach((sec) => {
-    // sec.getBoundingClientRect().top >= -200 &&
-    // sec.getBoundingClientRect().top <= 150
     if (
       sec.getBoundingClientRect().top >= -200 &&
       sec.getBoundingClientRect().top <= 150
